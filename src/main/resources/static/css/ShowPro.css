@@ -1,0 +1,52 @@
+#show_left{
+    width: 300px;
+    margin-left: 100px;
+    margin-right: 50px;
+    background:#ccffcc;
+    float: left;
+    margin-top: 10px;
+}
+#show_left .menu_left h3{
+    background: #ff6600;
+    text-align: center;
+    margin-top: 0px;
+    font-size: 16px;
+    line-height: 40px;
+    color: #ffffff;
+}
+#show_left .menu_left ul{
+    padding: 0px;
+}
+#show_left .menu_left ul li{
+    list-style: none;
+}
+#show_left .menu_left ul li a{
+    display: block;
+    margin-left: 50px;
+    text-decoration: none;
+    line-height: 30px;
+    border-bottom: 1px solid appworkspace;
+    clear: left;
+}
+#show_right {
+    width: 800px;
+    
+    float: left;
+    margin-top: 10px;
+}
+#show_right .list_pro ul{
+    padding: 0px;
+}
+#show_right .list_pro ul li{
+    list-style: none;
+    clear: left;
+}
+#show_right .list_pro ul li img {
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+
+

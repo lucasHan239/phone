@@ -1,0 +1,163 @@
+#showcarts{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+#showcarts #pro_info .top{
+    overflow: hidden;
+    background-color: #ffffff;
+    height: 50px;
+    margin-left: 100px;
+}
+#showcarts #pro_info .info_topnav{
+    overflow: hidden;
+    background-color: #ccffcc;
+    height: 40px;
+    margin-top: 10px;
+}
+#showcarts #pro_info .info_topnav a{
+    text-align: center;
+    margin-top: 8px;
+    font-family: Time New Romand;
+    font-size: 16px;
+}
+#showcarts #pro_info .info_topnav a[name="1"]{
+    float: left;
+    display: block;
+    text-align: center;
+    width: 200px;
+    text-decoration: 1px;
+}
+#showcarts #pro_info .info_topnav a[name="2"]{
+    float: left;
+    display: block;
+    text-align: center;
+    width: 200px;
+    text-decoration: 1px;
+}
+#showcarts #pro_info .info_topnav a[name="3"]{
+    float: left;
+    display: block;
+    text-align: center;
+    width: 150px;
+    text-decoration: 1px;
+}
+#showcarts #pro_info .info_topnav a[name="4"]{
+    float: left;
+    display: block;
+    text-align: center;
+    width: 150px;
+    text-decoration: 1px;
+}
+#showcarts #pro_info .info_topnav a[name="5"]{
+    float: left;
+    display: block;
+    text-align: center;
+    width: 150px;
+    text-decoration: 1px;
+}
+#showcarts #pro_info .detail{
+    margin-top: 10px;
+}
+#showcarts #pro_info .detail a{
+    margin-top: 20px;
+    font-family: Time New Romand;
+    font-size: 16px;
+    color: black;
+}
+#showcarts #pro_info .detail a[name="6"]{
+    clear: left;
+    float: left;
+    display: block;
+    text-align: center;
+    width: 200px;
+    text-decoration: 1px;
+}
+#showcarts #pro_info .detail a[name="7"]{
+    float: left;
+    display: block;
+    text-align: center;
+    width: 200px;
+    text-decoration: 1px;
+    margin-top: 50px;
+}
+#showcarts #pro_info .detail a[name="8"]{
+    float: left;
+    display: block;
+    text-align: center;
+    width: 150px;
+    text-decoration: 1px;
+    margin-top: 50px;
+}
+#showcarts #pro_info .detail a[name="9"]{
+    float: left;
+    display: block;
+    text-align: center;
+    width: 150px;
+    text-decoration: 1px;
+    margin-top: 50px;
+}
+#showcarts #pro_info .detail a[name="10"]{
+    float: left;
+    display: block;
+    text-align: center;
+    width: 150px;
+    text-decoration: 1px;
+    margin-top: 50px;
+}
+#showcarts #pro_info .detail a[name="btn1"]{
+    float: left;
+    margin-top: 50px;
+    margin-left: 15px;
+    background: #ffffcc;
+}
+#showcarts #pro_info .detail a[name="btn2"]{
+    float: left;
+    margin-top: 50px;
+    margin-left: 15px;
+    background: #ffffcc;
+}
+#showcarts #pro_info .detail a[name="btn3"]{
+    float: left;
+    margin-top: 50px;
+    margin-left: 15px;
+    background: #ffffcc;
+}
+#showcarts #pro_info .total{
+    clear: left;
+    margin-top: 50px;
+    margin-left: 800px;
+    border: 1px solid #ff6600;
+    height: 60px;
+    text-align: center;
+    background: #ffffcc;
+}
+
+
+#showcarts #deli_info{
+    clear: left;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+#showcarts #deli_info input[type=text]{
+    width: 800px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+#showcarts #confirm input[type=submit]{
+    clear: left;
+    margin-top: 50px;
+    margin-left: 500px;
+    width: 150px;
+    height: 40px;
+    background: #ff6600;
+}
+
+
+
+

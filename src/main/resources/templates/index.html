@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>HP Telephone Shop</title>
+        <link th:href="@{/css/index.css}" rel="stylesheet" />
+        <link th:href="@{/css/header.css}" rel="stylesheet" />
+        <link rel="shortcut icon" type="image/png" href="images/logo-fix.png"/>
+    </head>
+    <body >
+        <header th:insert="header :: header" ></header>
+        <div style="margin: 15px;">
+
+        <i style=" color: red" th:text="${name}">
+                
+            </i>
+        <div id="list">
+            <div class="list_detail">
+                <ul>
+                 <th:block th:each="product : ${ListProduct}">
+                 <li>
+                     <a th:href="@{/viewpro?ID=__${product.id}__}" >
+                         <img th:src="@{${product.src_img}}" width="250px" height="250px"/>
+                     </a>
+                     <h3 style="color: red;" th:utext="${product.name}"></h3>
+                     <p> Giá: <i th:utext=" ${product.getSPrice()}"></i> VNĐ</p>
+                 </li>
+                 </th:block>
+               </ul>
+            </div>
+        </div>
+        </div>
+        <footer th:insert="footer :: footer"></footer>
+    </body>
+</html>

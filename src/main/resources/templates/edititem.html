@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	<title>HP Telephone Shop</title>
+        <link th:href="@{/css/EditCart.css}" rel="stylesheet"  />
+        <link th:href="@{/css/header.css}" rel="stylesheet" />
+        <link rel="shortcut icon" type="image/png" href="images/logo-fix.png"/>
+    </head>
+    
+    <body>
+        <header th:insert="header :: header" ></header>  
+        <div id="editcart_left">
+            <div class="menu_left">
+                <h3>DANH MỤC SẢN PHẨM</h3>
+                    <th:block th:each ="product : ${ListProduct}">
+	                    <li><a th:href="@{/viewpro?ID=__${product.id}__}"
+	                    th:utext = "${product.name}" ></a></li>
+                	</th:block>
+            </div>   
+        </div>
+        <div id="editcart_right">
+            <form th:action ="@{/edititem}" th:object="${item}" method="post">
+				<input type="hidden" th:name="idDetail" th:value="${item.idDetail}"/>
+	            <div id="img_pro">  
+	                <img th:src="@{${item.product.src_img}}" width="300px" height="300px"/>
+	            </div>
+	            <div id="detail_pro">
+	                <h2 style="color: red" th:text="${item.product.name}"></h2>
+	                <p><i>Đơn giá: <i th:text="${item.product.getSPrice()}"></i> VNĐ</i></p>
+	                <p><i>Số lượng: </i>
+	                    <input type="number" th:name="quantity" th:value="${item.quantity}"
+	                      min="1"/>
+	                    
+	                </p>
+	                <p><i>Bảo hành: </i>
+	                
+	                    <select th:name="guarantee" th:value="${item.guarantee}">
+	                        <option value ="iCare"> iCare </option>
+	                        <option value ="iCare+"> iCare+ </option>
+	                    </select>
+	                    
+	                </p>
+	                <br>
+	                <br>
+	                <input type="submit" value="Update Cart" /> 
+	
+	            </div>
+            </form>
+        </div>   
+        <footer th:insert="footer :: footer"></footer>
+    </body>
+</html>

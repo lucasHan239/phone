@@ -1,0 +1,25 @@
+#banner{
+    height: max-content;
+    clear: left;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+*#list{
+    margin-left: 100px;
+    margin-top: 50px;
+}
+#list .list_detail ul{
+    padding: 0px;
+}
+#list .list_detail ul li{
+    list-style: none;
+    float: left;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+#list .list_detail ul li h3{
+    text-align: center;
+}
+#list .list_detail ul li p{
+    text-align: center;
+}

@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	<title>HP Telephone Shop</title>
+        <link th:href="@{/css/ShowOrder.css}" rel="stylesheet"  />
+        <link th:href="@{/css/header.css}" rel="stylesheet" />
+        <link rel="shortcut icon" type="image/png" href="images/logo-fix.png"/>
+    </head>
+    
+    <body>
+        <header th:insert="header :: header" ></header>  
+
+		<div class="top">
+            <h2 style="font: Time New Romand; size: 18px; color: red;text-align: center;">GIỎ HÀNG</h2>
+        </div>
+        <th:block th:each="order :${ListOrder}">
+	        <div id="showorder">
+	            <div id="order_info">
+	                
+	                <div class="info_topnav">
+	                    <a th:name="1"><b>Hình ảnh</b></a>
+	                    <a th:name="2"><b>Tên sản phẩm</b></a>
+	                    <a th:name="3"><b>Số lượng</b></a>
+	                    <a th:name="4"><b>Đơn giá</b></a>
+	                    <a th:name="5"><b>Loại bảo hành</b></a>
+	                </div>
+	                <div class="detail">
+	                         
+	                    <th:block th:each = "item : ${order.cart.items}" >
+		                    <a th:name="6"><img th:src="@{${item.product.src_img}}" width="100px" height="100px"></a>
+		                    <a th:name="7" th:text = "${item.product.name}"></a>
+		                    <a th:name="8" th:text = "${item.quantity}"></a>
+		                    <a th:name="9" th:text = "${item.product.getSPrice()}"></a>
+		                    <a th:name="10" th:text = "${item.guarantee}"></a>
+	                        <a th:name="btn1" th:href="@{/viewpro?ID=__${item.product.id}__}"><b>View Detail</b></a>
+	                    </th:block>
+	                </div>
+	                <div class="total">
+	                    <h3 style="size: 18px; color: black; font: Time New Romand"><b> Tổng tiền: <b th:text="${order.cart.getTotalCost()}" ></b> VNĐ </b></h3>
+	                </div>
+	            </div>
+	            <div id="deli_info">
+	                <h2 th:name="top_deli_info" style="font: Time New Romand; size: 18px; color: red">THÔNG TIN GIAO HÀNG</h2>
+	                <p> Họ và tên: <b th:text="${order.nameEmp}"> </b> </p>
+	                	
+	                
+	                <p> Số nhà, phường, quận:  <b th:text="${order.addressEmp}"> </b>  </p>
+	                	
+	                
+	                <p> Thành phố: <b th:text="${order.cityEmp}"> </b> </p>  
+	                	
+	                
+	                <p> Số điện thoại: <b th:text="${order.telEmp}"> </b></p> 
+	                	 
+	                
+	            </div>
+	            <hr>  
+	        </div>
+        </th:block>
+        <footer th:insert="footer :: footer"></footer>
+    </body>
+</html>

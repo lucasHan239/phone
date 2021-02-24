@@ -1,0 +1,40 @@
+#signin{
+    clear: left;
+    margin: 0 auto;
+    height: auto;
+    width: fit-content;
+}
+#signin label{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#signin input[type=text]{
+    width: 600px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#signin input[type=password]{
+    width: 600px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#signin input[type=submit] {
+    margin-left: 250px;
+    width: 100px;
+    height: 40px;
+    background: yellow;
+    font: TimeNewRomand;
+    size: 24px;
+    color: black;
+}
+

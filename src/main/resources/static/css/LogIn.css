@@ -1,0 +1,46 @@
+#login{
+    clear: left;
+    margin: 0 auto;
+    height: auto;
+    width: fit-content;
+}
+#login label{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#login input[type=text]{
+    width: 600px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#login input[type=password]{
+    width: 600px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#login input[type=submit] {
+    width: 100px;
+    height: 40px;
+    background: yellow;
+    font: TimeNewRomand;
+    size: 24px;
+    color: black;
+}
+#login button {
+    margin-left: 150px;
+    width: 100px;
+    height: 40px;
+    background: yellow;
+}
+
+

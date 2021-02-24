@@ -1,0 +1,128 @@
+#showorder{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+#showorder #order_info .top{
+    overflow: hidden;
+    background-color: #ffffff;
+    height: 50px;
+    margin-left: 100px;
+}
+#showorder #order_info .info_topnav{
+    overflow: hidden;
+    background-color: #ccffcc;
+    height: 40px;
+    margin-top: 10px;
+}
+#showorder #order_info .info_topnav a{
+    text-align: center;
+    margin-top: 8px;
+    font-family: Time New Romand;
+    font-size: 16px;
+}
+#showorder #order_info .info_topnav a[name="1"]{
+    float: left;
+    display: block;
+    text-align: center;
+    width: 200px;
+    text-decoration: 1px;
+}
+#showorder #order_info .info_topnav a[name="2"]{
+    float: left;
+    display: block;
+    text-align: center;
+    width: 200px;
+    text-decoration: 1px;
+}
+#showorder #order_info .info_topnav a[name="3"]{
+    float: left;
+    display: block;
+    text-align: center;
+    width: 150px;
+    text-decoration: 1px;
+}
+#showorder #order_info .info_topnav a[name="4"]{
+    float: left;
+    display: block;
+    text-align: center;
+    width: 150px;
+    text-decoration: 1px;
+}
+#showorder #order_info .info_topnav a[name="5"]{
+    float: left;
+    display: block;
+    text-align: center;
+    width: 150px;
+    text-decoration: 1px;
+}
+#showorder #order_info .detail{
+    margin-top: 10px;
+}
+#showorder #order_info .detail a{
+    margin-top: 20px;
+    font-family: Time New Romand;
+    font-size: 16px;
+    color: black;
+}
+#showorder #order_info .detail a[name="6"]{
+    clear: left;
+    float: left;
+    display: block;
+    text-align: center;
+    width: 200px;
+    text-decoration: 1px;
+}
+#showorder #order_info .detail a[name="7"]{
+    float: left;
+    display: block;
+    text-align: center;
+    width: 200px;
+    text-decoration: 1px;
+    margin-top: 50px;
+}
+#showorder #order_info .detail a[name="8"]{
+    float: left;
+    display: block;
+    text-align: center;
+    width: 150px;
+    text-decoration: 1px;
+    margin-top: 50px;
+}
+#showorder #order_info .detail a[name="9"]{
+    float: left;
+    display: block;
+    text-align: center;
+    width: 150px;
+    text-decoration: 1px;
+    margin-top: 50px;
+}
+#showorder #order_info .detail a[name="10"]{
+    float: left;
+    display: block;
+    text-align: center;
+    width: 150px;
+    text-decoration: 1px;
+    margin-top: 50px;
+}
+#showorder #order_info .detail a[name="btn1"]{
+    float: left;
+    margin-top: 50px;
+    margin-left: 15px;
+    background: #ffffcc;
+}
+
+#showorder #order_info .total{
+    clear: left;
+    margin-top: 50px;
+    margin-left: 800px;
+    border: 1px solid #ff6600;
+    height: 60px;
+    text-align: center;
+    background: #ffffcc;
+}
+#showorder #deli_info{
+    clear: left;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+

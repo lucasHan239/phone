@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	<title>HP Telephone Shop</title>
+        <link rel="stylesheet" type="text/css" href="css/ShowPro.css"/>
+        <link th:href="@{/css/header.css}" rel="stylesheet" />
+        <link rel="shortcut icon" type="image/png" href="images/logo-fix.png"/>
+    </head>
+    
+    <body>
+        <header th:insert="header :: header" ></header>       
+        <div id="show_left">
+            <div class="menu_left">
+                <h3>DANH MỤC SẢN PHẨM</h3>
+              
+                    <th:block th:each ="product : ${ListProduct}">
+	                    <li><a th:href="@{/viewpro?ID=__${product.id}__}"
+	                    th:utext = "${product.name}" ></a></li>
+                	</th:block>
+                
+            </div>    
+        </div>
+        <div id="show_right">
+            <div class="list_pro">
+               
+                 <th:block th:each ="product2 : ${ListResult}">
+                 <li>
+                     <a th:href="@{/viewpro?ID=__${product2.id}__}" >
+                         <img th:src="@{${product2.src_img}}" width="250px" height="250px"/>
+                     </a>
+                     <h3 style="color: red"><i th:text = "${product2.name}">
+                     	<a th:href="@{/viewpro?ID=__${product2.id}__}"></a>
+                     </i></h3>
+                     <p>Giá: <i th:text = "${product2.getSPrice()}"></i> VNĐ</p>
+                 </li>
+                </th:block>
+                
+            </div>
+        </div>  
+        
+    </body>
+    <footer th:insert="footer :: footer"></footer>
+</html>

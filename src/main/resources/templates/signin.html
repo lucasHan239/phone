@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+    <title>HP Telephone Shop</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link th:href="@{/css/header.css}" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" th:href="@{/css/SignIn.css}"/>
+        <link rel="shortcut icon" type="image/png" href="images/logo-fix.png"/>
+    </head>
+    <body>
+        <header th:insert="header :: header" ></header>
+        <script type="text/javascript">
+        var check = function() {
+        	if (document.getElementById('password').value.length < 6) {
+        	    document.getElementById('message1').style.color = 'red';
+        	    document.getElementById('message1').innerHTML = 'không đủ 6 kí tự';
+        	    document.getElementById("Button").disabled = true;
+        	  } else {
+        	    document.getElementById('message').innerHTML = '';
+        	    document.getElementById("Button").disabled = false;
+        	  }
+        
+        	  if (document.getElementById('password').value ==
+        	    document.getElementById('confirm_password').value) {
+        	    document.getElementById('message').style.color = 'green';
+        	    document.getElementById('message').innerHTML = '✓';
+        	    document.getElementById("Button").disabled = false;
+        	  } else {
+        	    document.getElementById('message').style.color = 'red';
+        	    document.getElementById('message').innerHTML = 'không trùng';
+        	    document.getElementById("Button").disabled = true;
+        	  }
+        	}
+        </script>
+        <div id="signin">
+            <h2 th:name="top_signin" style="text-align:center; font: Time New Romand; size: 18px; color: red">ĐĂNG KÝ</h2>
+            
+            <i style="  color: red" th:text="${error}">
+            
+            </i>
+            <br>
+            <br>
+            <form th:action="@{/signin}" th:object="${User}" method="post">
+	            <label for="user"><b style="size: 16px">Tên đăng nhập:</b></label>
+	            <br>
+	            <input type="text" th:field="*{username}" placeholder="Username..." required>
+	            <br>
+	            <label for="pass"><b style="size: 16px">Mật khẩu:</b></label>
+	            <br>
+	            <input required type="password" th:field="*{password}" id ="password" onkeyup="check()" placeholder="Password...">
+	            <i id='message1'></i>
+	            <br>
+	            <label for="pass"><b style="size: 16px">Xác nhận mật khẩu:</b></label>
+	            <br>
+	            <input required type="password" id ="confirm_password" onkeyup="check()" placeholder="Confirm Password...">
+	            <i id='message'></i>
+	            <br>
+	            <br> <br>
+	            <input type="submit" id="Button" value="Đăng kí" disabled/>
+	            
+            </form>
+        </div>
+        <footer th:insert="footer :: footer"></footer>
+    </body>
+</html>

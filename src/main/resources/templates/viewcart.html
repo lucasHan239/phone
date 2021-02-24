@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	<title>HP Telephone Shop</title>
+        <link th:href="@{/css/ShowCarts.css}" rel="stylesheet"  />
+        <link th:href="@{/css/header.css}" rel="stylesheet" />
+        <link rel="shortcut icon" type="image/png" href="images/logo-fix.png"/>
+    </head>
+    
+    <body>
+        <header th:insert="header :: header" ></header>  
+
+          
+          <div id="showcarts">
+            <div id="pro_info">
+                <div class="top">
+                    <h2 style="font: Time New Romand; size: 18px; color: red">GIỎ HÀNG</h2>
+                </div>
+                <div class="info_topnav">
+                    <a th:name="1"><b>Hình ảnh</b></a>
+                    <a th:name="2"><b>Tên sản phẩm</b></a>
+                    <a th:name="3"><b>Số lượng</b></a>
+                    <a th:name="4"><b>Đơn giá</b></a>
+                    <a th:name="5"><b>Loại bảo hành</b></a>
+                </div>
+                <div class="detail">
+                   <th:block th:each = "item: ${Items}" > 
+                       <a th:name="6"><img th:src="@{${item.product.src_img}}" width="100px" height="100px"></a>
+                       <a th:name="7" th:text = "${item.product.name}"></a>
+                       <a th:name="8" th:text = "${item.quantity}"></a>
+                       <a th:name="9" th:text = "${item.product.getSPrice()}"></a>
+                       <a th:name="10" th:text = "${item.guarantee}"></a>
+                       <a th:name="btn1" th:href="@{/viewpro?ID=__${item.product.id}__}"><b>View Detail</b></a>
+                       <a th:name="btn2" th:href="@{/edititem?ID=__${item.idDetail}__}"><b>Edit</b></a>
+                       <a th:name="btn3" th:href="@{/deleteitem?ID=__${item.idDetail}__}" 
+                       onclick="return confirm('Are you sure you want to delete this item?');"
+                       ><b>Delete</b></a>
+                   </th:block>
+                </div>
+                <div class="total">
+                    <h3 style="size: 18px; color: black; font: Time New Romand"><b> Tổng tiền: <b th:text="${Cart.getTotalCost()}"></b>  VNĐ </b></h3>
+                </div>
+            </div>
+            <form th:action="@{/makeorder}" th:object="${order}" method="post">    
+	            <th:center> 
+		            <div id="deli_info">
+		                <h2 th:name="top_deli_info" style="font: Time New Romand; size: 18px; color: red">ĐỊA CHỈ GIAO HÀNG</h2>
+		                <label for="fname">
+		                	<b style="size: 16px">Họ Tên</b>
+		                </label>
+		                <br>
+		                <input type="text" id="fname" th:field="*{nameEmp}" placeholder="Your name..."  required><br>
+		
+		                <label for="fname"><b style="size: 16px">Địa chỉ</b></label><br>
+		                <input type="text" id="fname" th:field=*{addressEmp} placeholder="Số nhà, tên, phường, quận..." required><br>
+		                <input type="text" id="fname" th:field=*{cityEmp} placeholder="Thành phố..." required><br>
+		                <label for="fname"><b style="size: 16px">Số điện thoại</b></label><br>
+		                <input type="text" id="fname" th:field=*{telEmp} placeholder="Your telephone..." pattern="[0-9]{10}" required><br>
+		            </div>
+		            <div id="confirm">
+		                <th:center>
+		                    <input type="submit" value="XÁC NHẬN"/>
+		                </th:center>
+		            </div>
+	            </th:center>
+            </form>
+        </div>
+          
+        <footer th:insert="footer :: footer"></footer>
+    </body>
+</html>
